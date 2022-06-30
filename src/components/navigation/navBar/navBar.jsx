@@ -6,7 +6,7 @@ const navBar = () => {
   return (
     <nav className="navbar navbar-expand-lg ">
       <div className="container-fluid navMargin">
-        <Link className="navbar-brand Link" to={"/"}>
+        <Link style={{ color: "white" }} className="navbar-brand Link" to={"/"}>
           Weather
         </Link>
         <button
