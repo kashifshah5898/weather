@@ -14,3 +14,9 @@
 .nav-item {
   margin-left: 2rem;
 }
+
+ul:hover {
+  border: "2px solid #28577A";
+  border-radius: "10px";
+  color: "#28577A";
+}

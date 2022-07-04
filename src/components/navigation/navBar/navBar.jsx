@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import "../../styles/global.css";
 
 const navBar = () => {
@@ -24,49 +24,114 @@ const navBar = () => {
           <div className="col-6"></div>
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <Link
-                style={{ color: "white" }}
+              <NavLink
+                // style={{ color: "white" }}
                 className="nav-link responsive-font-example"
                 to={"/"}
+                style={({ isActive }) =>
+                  isActive
+                    ? {
+                        border: "2px solid #59B2DE",
+                        borderRadius: "10px",
+                        color: "#59B2DE",
+                      }
+                    : {
+                        border: "none",
+                        borderRadius: "none",
+                        color: "white",
+                      }
+                }
               >
                 Home
-              </Link>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <Link
-                style={{ color: "white" }}
+              <NavLink
+                // style={{ color: "white" }}
                 className="nav-link responsive-font-example"
                 to={"/news"}
+                style={({ isActive }) =>
+                  isActive
+                    ? {
+                        border: "2px solid #59B2DE",
+                        borderRadius: "10px",
+                        color: "#59B2DE",
+                      }
+                    : {
+                        border: "none",
+                        borderRadius: "none",
+                        color: "white",
+                      }
+                }
               >
                 News
-              </Link>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <Link
-                style={{ color: "white" }}
+              <NavLink
+                // style={{ color: "white" }}
                 className="nav-link responsive-font-example"
                 to={"/live-cameras"}
+                style={({ isActive }) =>
+                  isActive
+                    ? {
+                        border: "2px solid #59B2DE",
+                        borderRadius: "10px",
+                        color: "#59B2DE",
+                      }
+                    : {
+                        border: "none",
+                        borderRadius: "none",
+                        color: "white",
+                      }
+                }
               >
                 Live Cameras
-              </Link>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <Link
-                style={{ color: "white" }}
+              <NavLink
+                // style={{ color: "white" }}
                 className="nav-link responsive-font-example"
                 to={"/photos"}
+                style={({ isActive }) =>
+                  isActive
+                    ? {
+                        border: "2px solid #59B2DE",
+                        borderRadius: "10px",
+                        color: "#59B2DE",
+                      }
+                    : {
+                        border: "none",
+                        borderRadius: "none",
+                        color: "white",
+                      }
+                }
               >
                 Photos
-              </Link>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <Link
-                style={{ color: "white" }}
+              <NavLink
+                // style={{ color: "white" }}
                 className="nav-link responsive-font-example"
                 to={"/contact"}
+                style={({ isActive }) =>
+                  isActive
+                    ? {
+                        border: "2px solid #59B2DE",
+                        borderRadius: "10px",
+                        color: "#59B2DE",
+                      }
+                    : {
+                        border: "none",
+                        borderRadius: "none",
+                        color: "white",
+                      }
+                }
               >
                 Contact
-              </Link>
+              </NavLink>
             </li>
           </ul>
         </div>
