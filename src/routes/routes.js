@@ -6,6 +6,8 @@ import LiveCameras from "../components/LiveCameras/liveCameras";
 import Contact from "../components/Contact/contact";
 import Photos from "../components/Photos/photos";
 import NavBar from "../components/navigation/navBar/navBar";
+import Footer from "../components/navigation/footer/Footer";
+// import NavBar from "../components/navigation/navBar/navBar";
 
 const Routers = () => {
   return (
