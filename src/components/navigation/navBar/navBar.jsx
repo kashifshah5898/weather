@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import "../../styles/global.css";
+import { VscThreeBars } from "react-icons/vsc";
 
 const navBar = () => {
   return (
@@ -8,7 +9,7 @@ const navBar = () => {
       <div className="container-fluid navMargin">
         <Link style={{ color: "white" }} className="navbar-brand Link" to={"/"}>
           Weather
-        </Link>
+        </Link>{" "}
         <button
           className="navbar-toggler navBarBurger"
           type="button"
@@ -18,7 +19,9 @@ const navBar = () => {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span className="navbar-toggler-icon"></span>
+          <span className="navbar-toggler-icon">
+            <VscThreeBars />{" "}
+          </span>
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <div className="col-6"></div>
