@@ -49,3 +49,60 @@ ul:hover {
   width: 15%;
   color: white;
 }
+.ulClass {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 85%;
+  transform: translate(-50%, -50%);
+}
+
+.ulClass li {
+  list-style: none;
+  margin: 0 15px;
+}
+
+.ulClass li a {
+  position: relative;
+  display: block;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  background: #333;
+  border-radius: 50%;
+  font-size: 20px;
+  color: #666;
+  transition: 0.5s;
+}
+
+.ulClass li a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: #59b2de;
+  transition: 0.5s;
+  transform: scale(0.9);
+  z-index: -1;
+}
+
+.ulClass li a:hover::before {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #59b2de;
+}
+
+.ulClass li a:hover {
+  color: #59b2de;
+  box-shadow: 0 0 5px #59b2de;
+  text-shadow: 0 0 5px #59b2de;
+}
+.navBarUl:hover {
+  color: #59b2de;
+  text-shadow: 0px 0px 20px #59b2de;
+}

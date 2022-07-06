@@ -26,7 +26,7 @@ const navBar = () => {
             <li className="nav-item">
               <NavLink
                 // style={{ color: "white" }}
-                className="nav-link responsive-font-example"
+                className="nav-link responsive-font-example navBarUl"
                 to={"/"}
                 style={({ isActive }) =>
                   isActive
@@ -48,7 +48,7 @@ const navBar = () => {
             <li className="nav-item">
               <NavLink
                 // style={{ color: "white" }}
-                className="nav-link responsive-font-example"
+                className="nav-link responsive-font-example navBarUl"
                 to={"/news"}
                 style={({ isActive }) =>
                   isActive
@@ -70,7 +70,7 @@ const navBar = () => {
             <li className="nav-item">
               <NavLink
                 // style={{ color: "white" }}
-                className="nav-link responsive-font-example"
+                className="nav-link responsive-font-example navBarUl"
                 to={"/live-cameras"}
                 style={({ isActive }) =>
                   isActive
@@ -92,7 +92,7 @@ const navBar = () => {
             <li className="nav-item">
               <NavLink
                 // style={{ color: "white" }}
-                className="nav-link responsive-font-example"
+                className="nav-link responsive-font-example navBarUl"
                 to={"/photos"}
                 style={({ isActive }) =>
                   isActive
@@ -114,7 +114,7 @@ const navBar = () => {
             <li className="nav-item">
               <NavLink
                 // style={{ color: "white" }}
-                className="nav-link responsive-font-example"
+                className="nav-link responsive-font-example navBarUl"
                 to={"/contact"}
                 style={({ isActive }) =>
                   isActive

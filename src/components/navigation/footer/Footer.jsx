@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "../../styles/global.css";
+import { AiFillTwitterCircle } from "react-icons/ai";
+import { BsInstagram, BsYoutube, BsFacebook } from "react-icons/bs";
 
 const Footer = () => {
   const [email, setEmail] = useState("");
@@ -32,7 +34,28 @@ const Footer = () => {
             </form>
           </div>
           <div className="col-4 d-flex">
-            <i class="fa-brands fa-facebook"></i>
+            <ul className="ulClass">
+              <li>
+                <a style={{ color: "#1f85de" }} href="#">
+                  <BsFacebook />
+                </a>
+              </li>
+              <li>
+                <a style={{ color: "#1f85de" }} href="#">
+                  <AiFillTwitterCircle />
+                </a>
+              </li>
+              <li>
+                <a style={{ color: "#1f85de" }} href="#">
+                  <BsInstagram />
+                </a>
+              </li>
+              <li>
+                <a style={{ color: "#1f85de" }} href="#">
+                  <BsYoutube />
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
