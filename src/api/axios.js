@@ -1,17 +1,18 @@
 var axios = require("axios");
 
-export const get_api = (url) => {
+export const get_api = async (url) => {
   var config = {
     method: "get",
     url: url,
     headers: {},
   };
-
-  axios(config)
-    .then(function (response) {
-      console.log(JSON.stringify(response.data));
-    })
-    .catch(function (error) {
-      console.log(error);
-    });
+  try {
+    const { data } = await axios(config);
+    if (data) {
+      return data;
+    }
+    throw new Error("Something went wrong please try again");
+  } catch (err) {
+    return { success: false, error: err };
+  }
 };

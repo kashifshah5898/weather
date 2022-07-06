@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../styles/global.css";
 import "./home.css";
 import { GrLocation } from "react-icons/gr";
@@ -9,31 +9,44 @@ const Home = () => {
   const [location, setLocation] = useState("");
   const [latLongAPI, setLatLongAPI] = useState("");
   const [apiError, setAPiError] = useState(false);
+  const dependecy = 0;
+
+  useEffect(() => {
+    getLocation();
+  }, [dependecy]);
 
   const findLocation = (e) => {
     e.preventDefault();
   };
 
-  const getLocation = (e) => {
-    e.preventDefault();
+  const getLocation = () => {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(showPosition);
     }
   };
   const showPosition = async (position) => {
-    // try {
-    //   let apiResponse = await weatherAPI(position.coords.latitude, position.coords.longitude);
-    //   setLatLongAPI(apiResponse);
-    // } catch (error) {
-    //   setAPiError(true);
-    //   setTimeout(() => {
-    //     setAPiError(false);
-    //   }, 5000);
-    // }
+    try {
+      let apiResponse = await weatherAPI(position.coords.latitude, position.coords.longitude);
+      setLatLongAPI(apiResponse);
+    } catch (error) {
+      apiErrorFunction();
+    }
   };
+  const apiErrorFunction = () => {
+    window.scrollTo(0, 0);
+    setAPiError(true);
+    setTimeout(() => {
+      setAPiError(false);
+    }, 5000);
+  };
+
   return (
     <>
-      {apiError ? <Toast /> : null}
+      {apiError ? (
+        <div className="container">
+          <Toast color="error" message="Something went wrong while fetching data" />
+        </div>
+      ) : null}
 
       <div className="bgImage">
         <div className="container">
