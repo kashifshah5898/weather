@@ -5,7 +5,7 @@ import { VscThreeBars } from "react-icons/vsc";
 
 const navBar = () => {
   return (
-    <nav className="navbar navbar-expand-lg ">
+    <nav className="container navbar navbar-expand-lg ">
       <div className="container-fluid navMargin">
         <Link style={{ color: "white" }} className="navbar-brand Link" to={"/"}>
           Weather

@@ -7,9 +7,7 @@ import Routes from "./routes/routes";
 function App() {
   return (
     <div className="weatherAppBgcolor">
-      <div className="container">
-        <Routes />
-      </div>
+      <Routes />
       <Footer />
     </div>
   );
