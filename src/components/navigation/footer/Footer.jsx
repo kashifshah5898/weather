@@ -14,7 +14,7 @@ const Footer = () => {
     <div className="footer">
       <div className="container mt-4">
         <div className="row">
-          <div className="col-8">
+          <div className="col-md-8">
             <form className="d-flex" onSubmit={subscribe}>
               <input
                 onChange={(e) => setEmail(e.target.value)}
@@ -33,7 +33,7 @@ const Footer = () => {
               />
             </form>
           </div>
-          <div className="col-4 d-flex">
+          <div className="col-md-3 mt-2 d-flex">
             <ul className="ulClass">
               <li>
                 <a style={{ color: "#1f85de" }} href="#">
@@ -58,6 +58,7 @@ const Footer = () => {
             </ul>
           </div>
         </div>
+        <span className=" copyRight">Copyright by Kashif. All rights reserved</span>
       </div>
     </div>
   );
