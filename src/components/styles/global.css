@@ -110,3 +110,12 @@ ul:hover {
 .p45 {
   padding: 45px;
 }
+.pointer {
+  cursor: pointer;
+}
+.locationIcon {
+  height: 45px;
+  width: 35px;
+  background: #325fd7;
+  border-radius: 50px;
+}

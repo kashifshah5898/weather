@@ -11,7 +11,7 @@ import "bootstrap/dist/js/bootstrap.js";
   integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
   crossorigin="anonymous"
 ></link>;
-
+<script src="http://maps.google.com/maps/api/js?sensor=false"></script>;
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
