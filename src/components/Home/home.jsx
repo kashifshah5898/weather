@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from "react";
 import "../styles/global.css";
 import "./home.css";
@@ -10,7 +11,25 @@ const Home = () => {
   const [latLongAPI, setLatLongAPI] = useState("");
   const [apiError, setAPiError] = useState(false);
   const dependecy = 0;
-
+  const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+  const months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+  const d = new Date();
+  let day = days[d.getDay()];
+  let date = d.getDate();
+  let month = months[d.getMonth()];
   useEffect(() => {
     getLocation();
   }, [dependecy]);
@@ -73,11 +92,16 @@ const Home = () => {
 
           <div
             className="card mb-2"
-            style={{ width: "18rem", background: "#262936", height: "14rem" }}
+            style={{ width: "25rem", background: "#262936", height: "14rem", borderRadius: "20px" }}
           >
-            <div className="card-body">
-              <h5 className="card-title color1">Card title</h5>
-              <h6 className="card-subtitle mb-2 text-muted">Card subtitle</h6>
+            <div className="card-body" style={{ padding: "5px" }}>
+              <h5 className="card-title color1 p-2" style={{ borderRadius: "10px" }}>
+                <span className="textColor">{day}</span>
+                <span className="textColor" style={{ float: "right", fontSize: "15px" }}>
+                  {date} &nbsp;{month}
+                </span>
+              </h5>
+              <h5 className="card-subtitle mt-2 mb-2 textColor p-4 ">{latLongAPI?.name}</h5>
               <p className="card-text">
                 Some quick example text to build on the card title and make up the bulk of the
                 card's content.
