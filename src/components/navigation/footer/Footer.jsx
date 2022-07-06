@@ -58,8 +58,8 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-        <span className=" copyRight">Copyright by Kashif. All rights reserved</span>
       </div>
+      <span className="copyRight">Copyright by Kashif. All rights reserved</span>
     </div>
   );
 };

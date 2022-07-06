@@ -33,9 +33,11 @@ const Home = () => {
             placeholder="Find your location"
             onChange={(e) => setLocation(e.target.value)}
           />
+          &nbsp;
           <span className="pointer" onClick={getLocation}>
             <GrLocation className="locationIcon" />
           </span>
+          &nbsp;
           <input
             className="btn btn-primary responsive-font-example "
             id="footerSubmit"
@@ -43,6 +45,15 @@ const Home = () => {
             value="find"
           />
         </form>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
       </div>
     </div>
   );
